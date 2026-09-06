@@ -28,7 +28,7 @@ const userSchema= new mongoose.Schema({
         skills:[{type:String}],
         resume:{type:String},
         resumeOriginalNAme:{type:String},
-        company:{type:mongoose.Schema.Type.ObjectId,ref:'company'},
+        company:{type:mongoose.Schema.Types.ObjectId,ref:'company'},
         profilePhoto:{
             type:String,
             default:''

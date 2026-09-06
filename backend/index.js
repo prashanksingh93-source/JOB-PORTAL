@@ -4,6 +4,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 import { connect } from "mongoose";
 import connectDB from "./utils/db.js";
+import userRoute from './routes/user.route.js'
 dotenv.config({})
 
 const app=express();
@@ -15,11 +16,18 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions={
-    orgin:'http://localhost:5173',
+    origin:'http://localhost:5173',
     credentials:true
 }
 app.use(cors(corsOptions))
 let port= process.env.PORT||3000
+
+//api's
+
+app.use("/api/v1/user",userRoute)
+
+http://localhost:8000/api/v1/user/register
+
 app.listen(port,()=>{
     connectDB()
     console.log(`server run on port ${port}`)
