@@ -14,8 +14,8 @@ const companySchema=mongoose.Schema({
           logo:{
             type:mongoose.Schema.Types.ObjectId,
             ref:'User',
-            required:true,
+        
           }
 },{timestamps:true});
 
-export const Company= mongoose.model("Company",companySchemaß)
+export const Company= mongoose.model("Company",companySchema)
