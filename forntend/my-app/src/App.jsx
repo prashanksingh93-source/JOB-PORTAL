@@ -1,22 +1,17 @@
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { ArrowUpIcon } from "lucide-react"
-
+import { createBrowserRouter } from 'react-router-dom'
 import './App.css'
+import Navbar from './components/shared/Navbar'
+
+const appRouter= createBrowserRouter({
+
+})
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
+ return (
     <>
-       <div className="flex flex-wrap items-center gap-2 md:flex-row">
-      <Button variant="outline">Button</Button>
-      <Button variant="outline" size="icon" aria-label="Submit">
-        <ArrowUpIcon />
-      </Button>
-    </div>
-      
-                 
+   
+     <Navbar/>          
     </>
   )
 }
